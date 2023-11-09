@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char *argv[])
 {
-  char code1 = 'A';
-  int code2 = 65;// ASCII에서 A에 해당하는 숫자는 65 
+  char src[] = "The worst thingss to eat before you sleep";
+  char dst[100];
   
-  printf("code1 = %c, (%d)\n", code1, code1); // A에 해당하는 숫자가 65임을 확 
-  printf("code2 = %c, (%d)\n", code2, code2); // 65에 해당하는 문자가 A임을 확 
+  // 복사 대상 문자열 = strcpy(대상, 원본); 
   
-  // A와 65가 mapping 관계에 있음 
-   
+  strcpy(dst, src);
+  printf("copied string: %s\n", dst); 
+ 
   system("PAUSE");	
   return 0;
 }
